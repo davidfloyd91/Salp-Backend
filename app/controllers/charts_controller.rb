@@ -1,4 +1,6 @@
 class ChartsController < ApplicationController
+  # if something's broken it's probably your params vvv
+
   def index
     @charts = Chart.all
     render json: @charts
@@ -9,9 +11,11 @@ class ChartsController < ApplicationController
     render json: @chart
   end
 
-  private
+  def create
+    @chart = Chart.new(params[:chart])
 
-  def chart_params
-    params.permit(:user_id, :data)
+    if @chart.save
+      render json: @chart
+    end
   end
 end
