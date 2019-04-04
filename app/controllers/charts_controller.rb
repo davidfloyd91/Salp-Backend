@@ -12,10 +12,16 @@ class ChartsController < ApplicationController
   end
 
   def create
-    @chart = Chart.new(params[:chart])
+    @chart = Chart.new(chart_params)
 
     if @chart.save
       render json: @chart
     end
+  end
+
+  private
+
+  def chart_params
+    params.require(:chart).permit!
   end
 end
