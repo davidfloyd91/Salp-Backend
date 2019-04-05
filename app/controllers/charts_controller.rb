@@ -1,6 +1,4 @@
 class ChartsController < ApplicationController
-  # if something's broken it's probably your params vvv
-
   def index
     @charts = Chart.all
     render json: @charts
