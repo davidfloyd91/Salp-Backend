@@ -17,6 +17,13 @@ class ChartsController < ApplicationController
     end
   end
 
+  def destroy
+    @chart = Chart.find(params[:id])
+    if @chart.destroy
+      render json: @chart
+    end
+  end
+
   private
 
   def chart_params
