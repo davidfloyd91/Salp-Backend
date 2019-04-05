@@ -13,7 +13,7 @@ class ChartsController < ApplicationController
     @chart = Chart.new(chart_params)
 
     if @chart.save
-      render json: @chart
+      render json: @chart, status: :ok
     end
   end
 
