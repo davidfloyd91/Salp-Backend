@@ -20,7 +20,7 @@ class ChartsController < ApplicationController
   def destroy
     @chart = Chart.find(params[:id])
     if @chart.destroy
-      render json: @chart
+      render json: @chart, status: :ok
     end
   end
 
