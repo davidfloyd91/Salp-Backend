@@ -9,6 +9,12 @@ class ChartsController < ApplicationController
     render json: @chart
   end
 
+  def update
+    @chart = Chart.find(params[:id])
+    @chart.update(data: params[:data])
+    render json: @chart
+  end
+
   def create
     @chart = Chart.new(chart_params)
 
