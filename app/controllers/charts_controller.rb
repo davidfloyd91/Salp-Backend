@@ -33,6 +33,70 @@ class ChartsController < ApplicationController
   private
 
   def chart_params
-    params.require(:chart).permit!
+    params.require(:chart).permit(
+      :user_id,
+      {
+        :data => [
+          :type,
+          {
+            data: [
+              {:labels => []},
+              {
+                _datasets: [
+                  :label,
+                  :fill,
+                  :borderColor,
+                  {:backgroundColor => []},
+                  :lineTension,
+                  :pointRadius,
+                  {:data => []}
+                ]
+              }
+            ]
+          },
+          {
+            options: [
+              {
+                title: [
+                  :display,
+                  :text
+                ]
+              },
+              {
+                scales: [
+                  {
+                    yAxes: [
+                      {
+                        ticks: [
+                          :min,
+                          :max,
+                          :stepSize
+                        ],
+                      },
+                      {
+                        scaleLabel: [
+                          :display,
+                          :labelString
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    xAxes: [
+                      {
+                        scaleLabel: [
+                          :display,
+                          :labelString
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    )
   end
 end
