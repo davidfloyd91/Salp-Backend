@@ -1,6 +1,4 @@
 class UsersController < ApplicationController
-  # if something's broken it's probably your params vvv
-
   def index
     @users = User.all
     render json: @users
