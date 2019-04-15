@@ -1,4 +1,6 @@
 class ChartsController < ApplicationController
+  # before_action :authorize
+
   def index
     @charts = Chart.all
     render json: @charts
