@@ -16,6 +16,7 @@ class ApplicationController < ActionController::API
   end
 
   def current_user
+    puts 'in current_user'
     User.find(decode_token[0]['user_id'])
   end
 
