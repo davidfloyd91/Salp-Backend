@@ -1,24 +1,48 @@
-# README
+# Salp
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A simple, intuitive chart-making application that uses Chart.js. Using Salp, you can:
 
-Things you may want to cover:
++ input data manually or by uploading a CSV;
++ turn that data into a line, bar or pie chart;
++ customize the chart's presentation;
++ save and edit charts;
++ generate an iframe of a chart to embed on your site.
 
-* Ruby version
+## Installation
+#### Backend
 
-* System dependencies
+This repository contains Salp's backend. To install it, in the the terminal:
 
-* Configuration
++ run `git clone git@github.com:davidfloyd91/Salp-Backend.git` in your desired directory;
++ run `cd Salp-Backend`;
++ run `bundle`;
++ run `rails s`.
 
-* Database creation
+The database will run at `localhost:3000`.
 
-* Database initialization
+#### Frontend
 
-* How to run the test suite
+The frontend lives at https://github.com/davidfloyd91/Salp. To install it, in the terminal:
 
-* Services (job queues, cache servers, search engines, etc.)
++ run `git clone git@github.com:davidfloyd91/Salp.git` in your desired directory;
++ run `cd Salp`;
++ run `npm i`;
++ run `npm start`.
 
-* Deployment instructions
+Then:
 
-* ...
++ visit `localhost:3001` in the browser.
+
+## Demo
+
+Todo.
+
+## Known bugs
+
+After saving a chart, the data for that chart will sometimes appear in the manual input fields for a new chart. These data do not affect the actual chart's display, which treats the fields as blank, and they can simply be overwritten.
+
+## License
+
+Salp is licensed under the MIT License.
+
+Copyright 2019 David Floyd.
