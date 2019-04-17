@@ -8,6 +8,10 @@ A simple, intuitive chart-making application that uses Chart.js. Using Salp, you
 + save and edit charts;
 + generate an iframe of a chart to embed on your site.
 
+## Demo
+
+See [here](https://www.youtube.com/watch?v=1zRdEr1ctiY) for a video demo.
+
 ## Installation
 ### Backend
 
@@ -42,10 +46,6 @@ The frontend lives at [this repo](https://github.com/davidfloyd91/Salp). To inst
 + `$ npm start`
 
 Then visit `localhost:3001` in the browser.
-
-## Demo
-
-See [here](https://www.youtube.com/watch?v=1zRdEr1ctiY) for a video demo.
 
 ## Known bugs
 
