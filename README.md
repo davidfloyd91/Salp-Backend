@@ -34,7 +34,7 @@ You can either write a value for `auth_secret` into your credentials file (which
 
 ### Frontend
 
-The frontend lives at https://github.com/davidfloyd91/Salp. To install it, run the following in the terminal (in your desired directory):
+The frontend lives at [this repo](https://github.com/davidfloyd91/Salp). To install it, run the following in the terminal (in your desired directory):
 
 + `$ git clone git@github.com:davidfloyd91/Salp.git`
 + `$ cd Salp`
@@ -45,7 +45,7 @@ Then visit `localhost:3001` in the browser.
 
 ## Demo
 
-Todo.
+See [here](https://www.youtube.com/watch?v=1zRdEr1ctiY) for a video demo.
 
 ## Known bugs
 
