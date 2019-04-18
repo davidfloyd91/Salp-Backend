@@ -51,6 +51,10 @@ Then visit `localhost:3001` in the browser.
 
 After saving a chart, the data for that chart will sometimes appear in the manual input fields for a new chart. These data do not affect the actual chart's display, which treats the fields as blank, and they can simply be overwritten.
 
+## What's a salp?
+
+[These](http://planktonchronicles.org/en/episode/salps-exploding-populations/) are salps.
+
 ## License
 
 Salp is licensed under the MIT License.
