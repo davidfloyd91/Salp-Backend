@@ -4,13 +4,13 @@ class ApplicationController < ActionController::API
   end
 
   def encode_token(payload)
-    # JWT.encode(payload, Rails.application.credentials.auth_secret)
+    # JWT.encode(payload, 'unsafe_secret_replacement')
     JWT.encode(payload, ENV['AUTH_SECRET'])
   end
 
   def decode_token
     begin
-      # JWT.decode(auth_headers, Rails.application.credentials.auth_secret)
+      # JWT.decode(auth_headers, 'unsafe_secret_replacement')
       JWT.decode(auth_headers, ENV['AUTH_SECRET'])
     rescue
       nil
@@ -18,7 +18,6 @@ class ApplicationController < ActionController::API
   end
 
   def current_user
-    puts 'in current_user'
     User.find(decode_token[0]['user_id'])
   end
 
