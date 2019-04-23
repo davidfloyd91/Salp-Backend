@@ -1,6 +1,10 @@
 class ChartsController < ApplicationController
   # before_action :authorize
 
+  def root
+    render json: {hello: 'world'}
+  end
+
   def index
     @charts = Chart.all
     render json: @charts
