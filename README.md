@@ -30,7 +30,7 @@ To run the app locally, it's necessary to make a few minor changes to the code:
 
 Then run:
 
-+ `$ bundle`
++ `$ bundle` (you may need to install Ruby 2.6.1)
 + `$ rails s`
 
 The database will run at `localhost:3000`. It is configured to run Postgres.
