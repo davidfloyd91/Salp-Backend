@@ -42,26 +42,31 @@ class ChartsController < ApplicationController
     params.require(:chart).permit(
       :user_id,
       {
-        :data => [
+        data: [
           :type,
           {
             data: [
-              {:labels => []},
+              {labels: []},
               {
                 _datasets: [
                   :label,
                   :fill,
                   :borderColor,
-                  {:backgroundColor => []},
+                  {backgroundColor: []},
                   :lineTension,
                   :pointRadius,
-                  {:data => []}
+                  {data: []}
                 ]
               }
             ]
           },
           {
             options: [
+              {
+                legend: [
+                  :display
+                ]
+              },
               {
                 title: [
                   :display,
